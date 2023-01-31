@@ -1,0 +1,92 @@
+<div class="header pb-8 pt-5 pt-md-8" style="min-height: 500px; background-image: url(assets/img/theme/porsche.jpg); background-size: cover; background-position: center top;">
+  
+  <span class="mask bg-gradient-success opacity-6"></span>
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="row">
+        <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Fleet</h5>
+                  <span class="h2 font-weight-bold mb-0">0</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
+                    <i class="fa-solid fa-bus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Cars</h5>
+                  <span class="h2 font-weight-bold mb-0">0</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
+                    <i class="fas fa-car"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt--9">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0"> {{ tableTitle }} </h3>
+            </div>
+            <div class="col text-right">
+              <a routerLinkActive="active" [routerLink]="['/history']" class="btn btn-sm btn-primary">See all</a>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <!-- Projects table -->
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th *ngFor="let head of tableData1.headerRow" scope="col">
+                  {{ head }}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let car of tableData1.dataRows">
+                <th scope="row">
+                  {{ car.Model }}
+                </th>
+                <td>
+                  {{ car.Matriculation }}
+                </td>
+                <td>
+                  {{ car.Latitude }}
+                </td>
+                <td>
+                  {{ car.Longitude }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

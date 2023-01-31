@@ -1,0 +1,70 @@
+<div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+  
+</div>
+<!-- Page content -->
+<div class="container mt--8 pb-5">
+  <!-- Table -->
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card bg-secondary shadow border-0">
+        
+        <div class="card-body px-lg-5 py-lg-5">
+          <div class="text-center text-muted mb-4">
+            <span>Add a new car to the fleet</span>
+          </div>
+          
+          <form >
+            <div class="form-group">
+              <div class="input-group input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa-solid fa-car-rear"></i></span>
+                </div>
+                <input class="form-control" type="text" name="matriculation" placeholder="matriculation" required >
+              </div>
+               <div>
+              <small id="emailHelp" class="form-text text-muted">This field is required</small> 
+               </div>
+            </div>
+           
+           
+            <div class="form-group">
+              <div class="input-group input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-tablet-button"></i></span>
+                </div>
+                <input class="form-control" type="text"  name="car brand" placeholder="car brand">
+              </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-tablet-button"></i></span>
+                  </div>
+                  <input class="form-control" type="text"  name="car model" placeholder="car model">
+                </div>
+              </div>
+
+            <div class="row my-4">
+              <div class="col-12">
+                <div class="col text-right">
+                  <u>
+                    <a routerLinkActive="active" [routerLink]="['/security-perimeter']" class="nav-link">Define security perimeter</a>
+                  </u> 
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <input class="btn btn-primary mt-4" type="submit" value="Save">
+            </div>
+            
+          </form>
+          
+         
+          
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
