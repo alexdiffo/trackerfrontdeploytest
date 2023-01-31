@@ -8,7 +8,7 @@
     "heroku-prebuild": "npm config set legacy-peer-deps true",
 
     "build": "ng build",
-    "heroku-postbuild": "ng build --prod",
+    
     
     "test": "ng test",
     "lint": "ng lint",
