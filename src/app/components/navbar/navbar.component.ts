@@ -20,19 +20,6 @@ export class NavbarComponent implements OnInit {
   userDetails;
 
   ngOnInit() {
-    // this.userService.getUserProfile().subscribe(
-    //   res => {
-    //     this.userDetails = res['user'];
-    //     console.log(JSON.stringify(this.userDetails));
-        
-    //     localStorage.setItem('userData', JSON.stringify(this.userDetails))
-    //   },
-    //   err => {
-    //     console.log(err);
-    //     // this.userService.deleteToken();
-    //     // this.userService.deleteUserData();
-    //   }
-    // );
     this.listTitles = ROUTES.filter(listTitle => listTitle);
     setTimeout(() => {
       this.userDetails = JSON.parse(localStorage.getItem('userData'));
@@ -56,7 +43,7 @@ export class NavbarComponent implements OnInit {
             return this.listTitles[item].title;
         }
     }
-    return '';
+    return 'Dashboard';
   }
 
 }

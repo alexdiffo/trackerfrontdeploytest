@@ -13,8 +13,6 @@ import { UserProfileComponent } from '../../pages/user-profile/user-profile.comp
 import { NotificationsComponent } from '../../pages/notifications/notifications.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FleetComponent } from '../../pages/fleet/fleet.component';
-import { CarsComponent } from '../../pages/cars/cars.component';
-
 import { NewFleetComponent } from '../../pages/newFleet/newFleet.component';
 import { HistoryComponent } from '../../pages/history/history.component';
 import { SecperimeterComponent } from '../../pages/secperimeter/secperimeter.component';
@@ -38,7 +36,6 @@ import { ModFleetComponent } from '../../pages/mod-fleet/mod-fleet.component';
     IconsComponent,
     MapsComponent,
     FleetComponent,
-    CarsComponent,
     NewFleetComponent,
     HistoryComponent,
     SecperimeterComponent,
