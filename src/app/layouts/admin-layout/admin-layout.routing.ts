@@ -6,8 +6,6 @@ import { MapsComponent } from '../../pages/maps/maps.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
 import { NotificationsComponent } from '../../pages/notifications/notifications.component';
 import { FleetComponent } from '../../pages/fleet/fleet.component';
-import { CarsComponent } from '../../pages/cars/cars.component';
-
 import { NewFleetComponent } from '../../pages/newFleet/newFleet.component';
 import { HistoryComponent } from '../../pages/history/history.component';
 import { SecperimeterComponent } from '../../pages/secperimeter/secperimeter.component';
@@ -22,7 +20,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'history',        component: HistoryComponent },
     { path: 'maps',           component: MapsComponent },
     { path: 'fleet',          component: FleetComponent },
-    { path: 'car',            component: CarsComponent },
     { path: 'new-fleet',      component: NewFleetComponent },
     { path: 'security-perimeter',   component: SecperimeterComponent },
     { path: 'new-car',              component: NewCarComponent },
