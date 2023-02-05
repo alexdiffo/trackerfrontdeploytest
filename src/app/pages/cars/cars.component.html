@@ -16,42 +16,36 @@
             </div>
           </div>
         </div>
-        
+
         <div class="table-responsive">
           <table class="table align-items-center table-flush">
             <thead class="thead-light">
               <tr>
                 <th scope="col">Matriculation</th>
                 <th scope="col">Brand</th>
-                
-                <th scope="col"></th>
+                <th scope="col">Fleet name</th>
               </tr>
             </thead>
             <tbody>
-                
               <tr *ngFor="let car of cars">
                 <th scope="row">
                   <div class="media align-items-center">
-                    
                     <div class="media-body">
-                            <span class="mb-0 text-sm"  >{{car.matriculation}}</span>
-                          
+                      <span class="mb-0 text-sm">{{car.matriculation}}</span>
                     </div>
                   </div>
                 </th>
                 <td>
-                    <span class="mb-0 text-sm"  >{{car.brand}} </span>    
+                  <span class="mb-0 text-sm">{{car.brand}} </span>
                 </td>
-                    <span class="mb-0 text-sm"  >{{car.fleet}} </span>    
+                <td>
+                  <span class="mb-0 text-sm">{{car.fleet}} </span>
+                </td>
               </tr>
-              
-              
             </tbody>
           </table>
         </div>
-        
       </div>
     </div>
   </div>
-  
 </div>

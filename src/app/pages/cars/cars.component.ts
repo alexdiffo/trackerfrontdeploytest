@@ -17,13 +17,10 @@ export class CarsComponent implements OnInit {
     this.carService.getCars().subscribe(
       res => {
         this.cars = res;
-        
       },
       err => {
         console.log(err);
       }
     );
   }
-
-
 }
