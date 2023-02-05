@@ -10,8 +10,12 @@
             <div class="card-body">
               <div class="row">
                 <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Fleet</h5>
-                  <span class="h2 font-weight-bold mb-0">0</span>
+                  <h5 class="card-title text-uppercase text-muted mb-0">
+                    <a routerLinkActive="active" [routerLink]="['/fleet']" class="nav-link">
+                       Fleet
+                       </a>
+                  </h5>
+                  <span class="h2 font-weight-bold mb-0">{{fleets.length}}</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
@@ -27,8 +31,12 @@
             <div class="card-body">
               <div class="row">
                 <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Cars</h5>
-                  <span class="h2 font-weight-bold mb-0">0</span>
+                  <h5 class="card-title text-uppercase text-muted mb-0">
+                    <a routerLinkActive="active" [routerLink]="['/car']" class="nav-link">
+                      Cars
+                    </a>
+                  </h5>
+                  <span class="h2 font-weight-bold mb-0" > {{cars.length}}</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-primary text-white rounded-circle shadow">

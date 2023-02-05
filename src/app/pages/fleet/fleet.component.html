@@ -33,12 +33,16 @@
                   <div class="media align-items-center">
                     
                     <div class="media-body">
-                      <span class="mb-0 text-sm"  >{{fleet.name}}</span>
+                          <a routerLinkActive="active" [routerLink]="['/car']" class="nav-link">
+                            <span class="mb-0 text-sm"  >{{fleet.name}}</span>
+                          </a>
                     </div>
                   </div>
                 </th>
                 <td>
-                  {{fleet.cars.length}} Cars
+                  <a routerLinkActive="active" [routerLink]="['/car']" class="nav-link">
+                    {{fleet.cars.length}} Cars
+                  </a> 
                 </td>
                 
                 <td class="text-right">
@@ -49,7 +53,7 @@
                     <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow" style="z-index: 898989;">
                       <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/new-fleet']">Modify</a>
                       <a class="dropdown-item" href="javascript:void(0)">Delete</a>
-                      <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/new-car']">New Car</a>
+                      <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/new-car']" (click)="getCurrentFleet(fleet)" >New Car</a>
                       <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/perimeter-fleet']">Define Perimeter</a>
 
                     </div>
@@ -89,7 +93,7 @@
             </tbody>
           </table>
         </div>
-        <div class="card-footer py-4">
+        <!-- <div class="card-footer py-4">
           <nav aria-label="...">
             <ul class="pagination justify-content-end mb-0">
               <li class="page-item disabled">
@@ -113,7 +117,8 @@
               </li>
             </ul>
           </nav>
-        </div>
+        </div> -->
+        
       </div>
     </div>
   </div>

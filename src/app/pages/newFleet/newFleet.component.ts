@@ -13,6 +13,7 @@ export class NewFleetComponent implements OnInit {
   userDetails;
   showSucessMessage: boolean;
   serverErrorMessages: string;
+
   constructor(public fleetService: FleetService,private router : Router) { }
 
   ngOnInit() {
@@ -21,6 +22,8 @@ export class NewFleetComponent implements OnInit {
   onSubmit(form: NgForm) {
     this.fleetService.postFleet(form.value).subscribe(
       res => {
+        
+
         this.showSucessMessage = true;
         setTimeout(() => this.showSucessMessage = false, 4000);
         this.router.navigateByUrl('/fleet');

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarService } from 'src/app/shared/carShared/car.service';
 import { UserService } from '../../shared/user.service';
 
+import { FleetService } from 'src/app/shared/fleetShared/fleet.service';
 declare interface TableData {
   headerRow: string[];
   dataRows;
@@ -18,12 +20,17 @@ export class DashboardComponent implements OnInit {
 
   public tableData1: TableData;
   userDetails;
-  constructor(private userService: UserService, private router: Router) { }
+  
+  cars
+  fleets
+  constructor(private userService: UserService, private router: Router, private carService : CarService, public fleetService: FleetService) { }
 
   ngOnInit() {
     this.userService.getUserProfile().subscribe(
       res => {
         this.userDetails = res['user'];
+        console.log(JSON.stringify(this.userDetails));
+        
         localStorage.setItem('userData', JSON.stringify(this.userDetails))
       },
       err => {
@@ -32,6 +39,26 @@ export class DashboardComponent implements OnInit {
         this.userService.deleteUserData();
       }
     );
+    this.carService.getCars().subscribe(
+      res => {
+        this.cars = res;
+        
+      },
+      err => {
+        console.log(err);
+      }
+    );
+
+    this.fleetService.getFleets().subscribe(
+      res => {
+        this.fleets = res;
+        
+      },
+      err => {
+        console.log(err);
+      }
+    );
+
     this.tableTitle = "Position History";
       this.tableData1 = {
           headerRow: [ 'Model', 'Matriculation', 'Latitude', 'Longitude'],

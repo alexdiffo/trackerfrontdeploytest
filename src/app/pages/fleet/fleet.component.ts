@@ -20,6 +20,7 @@ export class FleetComponent implements OnInit {
     this.fleetService.getFleets().subscribe(
       res => {
         this.fleets = res;
+        
       },
       err => {
         console.log(err);
@@ -27,4 +28,8 @@ export class FleetComponent implements OnInit {
     );
   }
 
+  getCurrentFleet(fleetDetails){
+    localStorage.setItem('fleetData', JSON.stringify(fleetDetails))
+    //console.log(fleet)
+  }
 }
